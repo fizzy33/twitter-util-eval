@@ -1,8 +1,14 @@
+organization := "a8"
+
 name := "twitter-eval-revival"
 
 version := "0.1"
 
 scalaVersion := "2.12.4"
+
+publishTo in Global := Some("a8-repo-publish" at "https://accur8.artifactoryonline.com/accur8/libs-releases-local/")
+
+credentials in Global += Credentials(Path.userHome / ".sbt" / "credentials")
 
 libraryDependencies += "com.twitter" % "util-core_2.12" % "18.2.0"
 
